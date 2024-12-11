@@ -21,9 +21,6 @@ class CreateTask(BaseModel):
 
 
 class UpdateTask(BaseModel):
-    # title: str
-    # content: str
-    # priority: int
     firstname: str
     lastname: str
     age: int
