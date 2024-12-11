@@ -10,8 +10,6 @@ info_ed = ('<h2>Домашнее задание по теме "Использо�
            '<br>Дата: 11.12.2024г.</h3>')
 
 
-# python -m uvicorn main:app
-# Get
 @app.get("/")
 async def welcome():
     return {"message": "Welcome to Taskmanager"}
@@ -24,7 +22,10 @@ async def info():
 
 app.include_router(task.router)
 app.include_router(user.router)
+
 # alembic revision --autogenerate -m "Initial migration"
 # python main.py migrate
+# alembic upgrade head
 # python -m uvicorn main:app
 # uvicorn main:app --reload
+
