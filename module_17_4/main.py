@@ -24,8 +24,7 @@ async def info():
 
 app.include_router(task.router)
 app.include_router(user.router)
-# python -m uvicorn main:app
 # alembic revision --autogenerate -m "Initial migration"
 # python main.py migrate
 # python -m uvicorn main:app
-# uvicorn main:app --reload --port 8001
+# uvicorn main:app --reload
